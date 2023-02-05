@@ -1,8 +1,6 @@
 # idrive
 **IDrive Backup Docker image**
 
-Docker Hub: https://hub.docker.com/r/renofischa/idrive
-
 IDrive services persist, so no need to relogin after each restart of the container.\
 It also works in TrueNAS SCALE. Configuration example is below.
 
@@ -15,7 +13,7 @@ It also works in TrueNAS SCALE. Configuration example is below.
 services:
   idrive:
     container_name: idrive
-    image: renofischa/idrive:latest
+    image: ghcr.io/lunksnee/idrive-persist:main
     restart: unless-stopped
     volumes:
       - config:/work/IDriveForLinux/idriveIt
@@ -36,7 +34,7 @@ volumes:
 
 ## TrueNAS SCALE example
 click on Apps -> Launch Docker image
-* Image repository: ````renofischa/idrive````
+* Image repository: ````ghcr.io/lunksnee/idrive-persist````
   ![image](https://user-images.githubusercontent.com/32832850/200179090-23813e89-c863-44cb-8aa3-8ded16d024e4.png)
 * Optional timezone environment variable
   ![image](https://user-images.githubusercontent.com/32832850/200179144-41492a50-d009-46b7-be27-bac8bf66d260.png)
