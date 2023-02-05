@@ -13,7 +13,7 @@ It also works in TrueNAS SCALE. Configuration example is below.
 services:
   idrive:
     container_name: idrive
-    image: ghcr.io/lunksnee/idrive-persist:main
+    image: ghcr.io/lunksnee/idrive-persist:release
     restart: unless-stopped
     volumes:
       - config:/work/IDriveForLinux/idriveIt
