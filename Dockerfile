@@ -3,7 +3,7 @@ FROM ubuntu:22.04
 # Install packages
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update \
-    && apt-get -y install --no-install-recommends nano unzip curl ca-certificates \
+    && apt-get -y install --no-install-recommends nano unzip curl ca-certificates libexpat1 \
     libfile-spec-native-perl sqlite3 build-essential perl-doc libdbi-perl libdbd-sqlite3-perl \
     && apt clean \
     && rm -rf /var/lib/apt/lists/*
