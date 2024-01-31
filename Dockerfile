@@ -17,7 +17,6 @@ RUN apt-get update \
 		    /root/.cache /root/.local /root/.gnupg /root/.config /tmp/*
 
 WORKDIR /work
-
 COPY entrypoint.sh .
 RUN chmod a+x entrypoint.sh \
     && curl -O https://www.idrivedownloads.com/downloads/linux/download-for-linux/LinuxScripts/IDriveForLinux.zip && \
